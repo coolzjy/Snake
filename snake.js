@@ -232,6 +232,7 @@ var Snake = {
 			// 监听按键并加入操作队列
 			document.onkeydown = function(e){
 				var e = e || window.event;
+				e.preventDefault();
 				if(!directions[e.keyCode]) return;
 				var opreation = directions[e.keyCode];
 				if(opreations[0]!=opreation.opreation&&opreations[0]!=opreation.oppsite&&(opreations[0]||direction!=opreation.oppsite)){
